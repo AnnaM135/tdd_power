@@ -40,3 +40,14 @@ TEST(TestSuite, NegativePower)
     EXPECT_DOUBLE_EQ(power(5, -3), 0.008);
     EXPECT_DOUBLE_EQ(power(10, -1), 0.1);
 }
+
+TEST(TestSuite, NegativeNumber)
+{
+    EXPECT_DOUBLE_EQ(power(-2, 2), 4);
+}
+
+TEST(TestSuite, BothNegative)
+{
+    EXPECT_DOUBLE_EQ(power(-2, -2), 0.25);
+    EXPECT_DOUBLE_EQ(power(-2, -3), -0.125); // (-2)-3 = 1 / (-8)
+}
